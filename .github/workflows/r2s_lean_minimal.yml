@@ -67,4 +67,10 @@ jobs:
           . x_assemble_artifact.sh
           release_tag="R2S-Minimal-$(date +%Y-%m-%d)"
           echo "##[set-output name=release_tag;]$release_tag"
+      - name: Upload firmware directory
+        uses: actions/upload-artifact@main
+        with:
+           name: 自动发布 ${{ steps.assemble_artifact.outputs.release_tag }}
+           path: ./artifact.zip
+
      
