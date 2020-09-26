@@ -70,7 +70,7 @@ jobs:
       - name: Upload firmware directory
         uses: actions/upload-artifact@main
         with:
-           name: 自动发布 ${{ steps.assemble_artifact.outputs.release_tag }}
+           name: ${{ steps.assemble_artifact.outputs.release_tag }}
            path: ./artifact.zip
 
      
