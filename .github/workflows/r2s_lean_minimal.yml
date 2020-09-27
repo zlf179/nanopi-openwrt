@@ -5,8 +5,10 @@ on:
     branches: [ master ]
     paths:
       - '.github/workflows/r2s_lean_minimal.yml'
-  schedule:
-      - cron: '00 08 * * *'
+  #schedule:
+     # - cron: '00 08 * * *'
+  watch:
+    types: started  
 
 jobs:
 
